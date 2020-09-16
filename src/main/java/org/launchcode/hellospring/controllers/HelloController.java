@@ -20,26 +20,9 @@ public class HelloController {
         };
     }
 
-    @GetMapping
-    @ResponseBody
+    @GetMapping("form")
     public String helloForm() {
-        String html =
-                "<html>" +
-                        "<body>" +
-                        "<form method = 'post' action = '/hello'>" +
-                        "<input type = 'text' name = 'coder' />" +
-                        "<select name = 'language'>"+
-                        "<option value = 'English'>English</option>"+
-                        "<option value = 'French'>French</option>"+
-                        "<option value = 'Spanish'>Spanish</option>"+
-                        "<option value = 'German'>German</option>"+
-                        "<option value = 'Kazakh'>Kazakh</option>"+
-                        "</select>"+
-                        "<input type = 'submit' value = 'Greet Me!' />" +
-                        "</form>" +
-                        "</body>" +
-                        "</html>";
-        return html;
+       return "form";
     }
 
 
